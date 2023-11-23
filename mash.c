@@ -40,24 +40,24 @@ int main(int argc, char *argv[]) {
   int pipeOut = 0; // pos of pipe with >
   int pipeIn = 0; // pos of pipe with <
   int count = 0; // count when setting in and out positions
+  const char* MASH_HISTORY = "/.mash_history";
 
-  // allocating space for command line, path, history, and home
   line = (char *)malloc(500);
-  myPATH = (char *)malloc(500);
-  myHISTFILE = (char *)malloc(500);
-  myHOME = (char *)malloc(500);
+  
 
   // this is where the history file will be located
-  strcpy(myHISTFILE, getenv("HOME"));
-  strcat(myHISTFILE, "/.mash_history");
+  char *homeEnv = getenv("HOME");
+  myHISTFILE =  calloc(sizeof(char), (strlen(homeEnv) + strlen(MASH_HISTORY) + 1));
+  strcpy(myHISTFILE, homeEnv);
+  strcat(myHISTFILE, MASH_HISTORY);
   // printf("HISTORY: %s\n", myHISTFILE);
 
   // only got this far for myPATH
-  strcpy(myPATH, getenv("PATH"));
+  myPATH = getenv("PATH");
   // printf("PATH: %s\n", myPATH);
 
   // only got this far for myHOME
-  strcpy(myHOME, getenv("HOME"));
+  myHOME = getenv("HOME");
   // printf("HOME: %s\n", myHOME);
 
   // initial prompt
