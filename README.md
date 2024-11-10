@@ -1,8 +1,13 @@
 # mash (maneesh's shell)
 
-Very tiny subset of bash that works on Linux, MacOS, and yes, Windows
+# Building & Running
 
-Implements the following:
+- Run `make -f Makefile.[Linux|Darwin]`
+  - On Windows, run `nmake -f Makefile.Windows`
+- Run `./mash`
+  - Can add flags such as `-v` for verbose mode
+
+# Implements
 
 - Process Creation (Running sub-programs) (ls -la)
 - Built-in Shell programs (cd, exit)
