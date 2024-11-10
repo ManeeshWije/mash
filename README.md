@@ -1,5 +1,7 @@
 # mash (maneesh's shell)
 
+- A **very** limited and non-compliant subset of Bash that works on Linux, MacOS, and yes, Windows
+
 # Building & Running
 
 - Run `make -f Makefile.[Linux|Darwin]`
