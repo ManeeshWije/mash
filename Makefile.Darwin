@@ -1,0 +1,28 @@
+EXE		= mash
+
+OBJS	= \
+		mash_main.o \
+		mash_run.o \
+		mash_tokenize.o
+
+
+CFLAGS	= -g
+
+LDFLAGS	= 
+LDLIBS	=
+
+
+# Default target - build the shell
+$(EXE) : $(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $(EXE) $(OBJS) $(LDLIBS)
+
+clean :
+	- rm -f $(EXE)
+	- rm -f $(OBJS)
+	- rm -f tags
+
+
+tags ctags : dummy
+	- ctags *.c
+
+dummy :

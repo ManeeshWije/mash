@@ -1,0 +1,11 @@
+getopt.c
+mash_main.c
+mash_run.c
+mash_tokenize.c
+mash_run.h
+mash_tokenize.h
+os_defs.h
+-rw-r--r-- 1 maneesh maneesh 315 Nov  9 20:03 Makefile.Darwin
+-rw-r--r-- 1 maneesh maneesh 315 Nov  9 20:03 Makefile.Linux
+-rw-r--r-- 1 maneesh maneesh 312 Nov  9 20:03 Makefile.Windows
+tests-linux-unix/test1.cmd tests-linux-unix/test2.cmd tests-linux-unix/test3.cmd

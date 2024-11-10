@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#
+# Simple test harness for "mash" shell that tests linux/unix specific functionality
+#
+
+for file in tests-linux-unix/test*.cmd
+do
+	echo "Testing ${file}"
+    ./mash < ${file} > ${file}.output
+    diff ${file}.expected ${file}.output
+done
+

@@ -1,0 +1,24 @@
+getopt.c
+grepped.output
+Makefile.Darwin
+Makefile.Linux
+Makefile.Windows
+mash
+mash_main.c
+mash_main.o
+mash_run.c
+mash_run.h
+mash_run.o
+mash_tokenize.c
+mash_tokenize.h
+mash_tokenize.o
+numberlines.exe
+os_defs.h
+printsomething.exe
+redir2.output
+redir.output
+runtests-linux-unix
+runtests-windows.bat
+tests-linux-unix
+tests-windows
+[1] 35625

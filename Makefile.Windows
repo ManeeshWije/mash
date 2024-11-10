@@ -1,0 +1,22 @@
+EXE		= mash.exe
+
+OBJS = \
+		mash_main.obj \
+		mash_run.obj \
+		mash_tokenize.obj
+
+CC		= cl
+
+CFLAGS	= 
+
+LDFLAGS	= 
+LDLIBS	=
+
+$(EXE) : $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) /link /out:$(EXE) $(LDFLAGS) $(LDLIBS)
+	icacls $(EXE) /grant Everyone:RX
+
+clean :
+	- del /f $(EXE) $(OBJS)
+	- del /f *.pdb
+

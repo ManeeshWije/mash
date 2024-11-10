@@ -1,2 +1,10 @@
-.DS_Store
+*.o
+*.obj
+*.pdb
+*.sw*
+*.core
 mash
+.clang-format
+*.cmd.output
+*.output
+mash.exe
